@@ -19,5 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.dataset.action === "delete"){
       e.target.parentElement.remove();
     }
+   
   })
 });
