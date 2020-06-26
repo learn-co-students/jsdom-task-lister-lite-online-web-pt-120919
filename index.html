@@ -12,14 +12,45 @@
     <form id="create-task-form" action="#" method="post">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" placeholder="duration">
+      <label for="priority">Priority level:</label>
+      <select id="priority" name="priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
       <input type="submit" value="Create New Task">
     </form>
 
     <div id="list">
+      <input id="sortList" type="button" value="sort list" onclick="sortList();" />
       <h2>My Todos</h2>
       <ul id="tasks">
+          <li id="1" style="background: red;">1</li><li id="2" style="background: yellow;">2</li><li id="3" style="background: green;">3</li><li id="4" style="background: red;">4</li><li id="5" style="background: yellow;">5</li><li id="6" style="background: green;">6</li>
       </ul>
     </div>
+
+    <form id="delete-task-form" action="#/delete" method="post">
+      <label for="delete-task-description">Task description:</label>
+      <input type="text" id="delete-task-description" name="delete-task-description" placeholder="description">
+      <input type="submit" value="Delete Task">
+    </form>
+    <form id="edit-task-form" action="#/edit" method="post">
+      <label for="edit-task-description">Task description to edit:</label>
+      <input type="text" id="edit-task-description" name="edit-task-description" placeholder="description to edit">
+      <label for="edit-task-description-new">New Task description:</label>
+      <input type="text" id="edit-task-description-new" name="edit-task-description-new" placeholder="new description">
+      <label for="edit-task-duration">Duration:</label>
+      <input type="text" id="edit-task-duration" name="edit-task-duration" placeholder="edit duration">
+      <label for="edit-task-priority">Priority level:</label>
+      <select id="edit-task-priority" name="edit-task-priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="submit" value="Edit Task">
+    </form>
 
     <script src="./src/index.js"></script>
   </div>
